@@ -57,6 +57,10 @@ class UserBookViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self) -> QuerySet[UserBook]:
         """Только записи текущего пользователя, с предзагрузкой связанных книг и тегов."""
+        if getattr(self, "swagger_fake_view", False):
+            # drf-spectacular генерирует схему с фейковым (анонимным) запросом —
+            # без этой проверки get_queryset упадёт на self.request.user.
+            return UserBook.objects.none()
         return (
             UserBook.objects.filter(user=self.request.user)
             .select_related("book")
