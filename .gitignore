@@ -1,0 +1,35 @@
+# Секреты и локальная конфигурация
+.env
+
+# Виртуальное окружение
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+
+# Django
+staticfiles/
+media/
+*.log
+logfile.txt
+db.sqlite3
+
+# Тесты и линтеры
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# ОС
+.DS_Store
+Thumbs.db
