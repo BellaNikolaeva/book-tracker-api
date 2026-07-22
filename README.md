@@ -1,3 +1,4 @@
+![CI](https://github.com/BellaNikolaeva/book-tracker-api/actions/workflows/ci.yml/badge.svg)
 # Book Tracker API
 
 🔗 **Живой API:** https://book-tracker-api-frnm.onrender.com/api/books/
